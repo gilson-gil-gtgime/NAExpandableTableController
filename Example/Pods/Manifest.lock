@@ -1,0 +1,14 @@
+PODS:
+  - NAExpandableTableController (0.1.0)
+
+DEPENDENCIES:
+  - NAExpandableTableController (from `../`)
+
+EXTERNAL SOURCES:
+  NAExpandableTableController:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  NAExpandableTableController: d10ca3ad3c64d447aaba1801d0db92deea813dfc
+
+COCOAPODS: 0.39.0
