@@ -4,7 +4,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "NAExpandableTableController"
-  s.version          = "0.1.1"
+  s.version          = "1.0.0"
   s.summary          = "An expandable UITableView implementation written in swift."
   s.description      = <<-DESC 
   An easy way to make an expandable UITableView written in Swift.
