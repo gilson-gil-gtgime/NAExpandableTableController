@@ -6,7 +6,7 @@
 
 import UIKit
 
-public protocol NAExpandableTableViewDataSource {
+@objc public protocol NAExpandableTableViewDataSource {
     /// Number of sections
     func numberOfExpandableSectionsInTableView(tableView: UITableView) -> Int
     
@@ -18,6 +18,12 @@ public protocol NAExpandableTableViewDataSource {
     
     /// Equivalent to UITableView's cellForRowAtIndexPath - called only for section title cell (the one that toggles expansion)
     func expandableTableView(tableView: UITableView, titleCellForSection section: Int, expanded: Bool) -> UITableViewCell
+    
+    /// The height of cells within an expandable section
+    optional func expandableTableView(tableView: UITableView, heightForRowInSection section: Int) -> CGFloat
+    
+    /// The height of the expandable section title cell
+    optional func expandableTableView(tableView: UITableView, heightForTitleCellInSection section: Int) -> CGFloat
 }
 
 @objc public protocol NAExpandableTableViewDelegate {
@@ -40,6 +46,8 @@ public class NAExpandableTableController: NSObject, UITableViewDataSource, UITab
     
     private var expandDict = [Int : Bool]()
     
+    let defaultRowHeight: CGFloat = 44
+    
     public init(dataSource: NAExpandableTableViewDataSource? = nil, delegate: NAExpandableTableViewDelegate? = nil) {
         super.init()
         self.dataSource = dataSource
@@ -50,6 +58,14 @@ public class NAExpandableTableController: NSObject, UITableViewDataSource, UITab
     
     public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return self.dataSource?.numberOfExpandableSectionsInTableView(tableView) ?? 0
+    }
+    
+    public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return self.dataSource?.expandableTableView?(tableView, heightForTitleCellInSection: indexPath.section) ?? defaultRowHeight
+        }
+        
+        return self.dataSource?.expandableTableView?(tableView, heightForRowInSection: indexPath.section) ?? defaultRowHeight
     }
     
     public func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
