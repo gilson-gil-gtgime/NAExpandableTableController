@@ -1,25 +1,22 @@
 {
   "name": "NAExpandableTableController",
-  "version": "0.1.0",
-  "summary": "A short description of NAExpandableTableController.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/NAExpandableTableController",
+  "version": "1.0.1",
+  "summary": "An expandable UITableView implementation written in swift.",
+  "description": "An easy way to make an expandable UITableView written in Swift.",
+  "homepage": "https://github.com/narciero/NAExpandableTableController",
+  "screenshots": "http://g.recordit.co/UsDQ3oI0wg.gif",
   "license": "MIT",
   "authors": {
     "Nick A": "narciero"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/NAExpandableTableController.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/narciero/NAExpandableTableController.git",
+    "tag": "1.0.1"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "requires_arc": true,
-  "source_files": "Pod/Classes/**/*",
-  "resource_bundles": {
-    "NAExpandableTableController": [
-      "Pod/Assets/*.png"
-    ]
-  }
+  "source_files": "Pod/Classes/*",
+  "frameworks": "UIKit"
 }

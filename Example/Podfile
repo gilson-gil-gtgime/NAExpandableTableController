@@ -1,12 +1,11 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'NAExpandableTableController_Example', :exclusive => true do
+target 'NAExpandableTableController_Example' do
   pod 'NAExpandableTableController', :path => '../'
 end
 
-target 'NAExpandableTableController_Tests', :exclusive => true do
+target 'NAExpandableTableController_Tests' do
   pod 'NAExpandableTableController', :path => '../'
 
-  
 end
