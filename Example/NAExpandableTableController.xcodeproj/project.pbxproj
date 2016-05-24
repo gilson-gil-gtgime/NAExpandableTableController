@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18562B62B71B973B562D8FFC /* Pods_NAExpandableTableController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF202FACCFB6DB2E15CAD305 /* Pods_NAExpandableTableController_Example.framework */; };
+		36DF29BE49416E5B83F0233F /* Pods_NAExpandableTableController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC369539404BFDEEDAB6B568 /* Pods_NAExpandableTableController_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ExampleViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		0DF3B99FDABC3FE42F478E4A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		21CB462EEFFD1DEB6C63FDC2 /* Pods-NAExpandableTableController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NAExpandableTableController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NAExpandableTableController_Tests/Pods-NAExpandableTableController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		256C57FCD379C710429C6F0F /* Pods-NAExpandableTableController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NAExpandableTableController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-NAExpandableTableController_Example/Pods-NAExpandableTableController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* NAExpandableTableController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NAExpandableTableController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,7 +42,11 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		9844F8A0F1A0F7921F23446A /* NAExpandableTableController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NAExpandableTableController.podspec; path = ../NAExpandableTableController.podspec; sourceTree = "<group>"; };
+		A9C460DEF90A48230CA2B9A1 /* Pods-NAExpandableTableController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NAExpandableTableController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NAExpandableTableController_Tests/Pods-NAExpandableTableController_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		AF202FACCFB6DB2E15CAD305 /* Pods_NAExpandableTableController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NAExpandableTableController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3287FC41BB9677F09536F96 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		EC369539404BFDEEDAB6B568 /* Pods_NAExpandableTableController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NAExpandableTableController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC5ADCBAA620C14AE68BF840 /* Pods-NAExpandableTableController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NAExpandableTableController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NAExpandableTableController_Example/Pods-NAExpandableTableController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18562B62B71B973B562D8FFC /* Pods_NAExpandableTableController_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,12 +62,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36DF29BE49416E5B83F0233F /* Pods_NAExpandableTableController_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		262DF983DED2EE18981C0D06 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC5ADCBAA620C14AE68BF840 /* Pods-NAExpandableTableController_Example.debug.xcconfig */,
+				256C57FCD379C710429C6F0F /* Pods-NAExpandableTableController_Example.release.xcconfig */,
+				21CB462EEFFD1DEB6C63FDC2 /* Pods-NAExpandableTableController_Tests.debug.xcconfig */,
+				A9C460DEF90A48230CA2B9A1 /* Pods-NAExpandableTableController_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +87,8 @@
 				607FACD21AFB9204008FA782 /* Example for NAExpandableTableController */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
+				262DF983DED2EE18981C0D06 /* Pods */,
+				611A65E8C433CE1428CFFAD2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +150,15 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		611A65E8C433CE1428CFFAD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF202FACCFB6DB2E15CAD305 /* Pods_NAExpandableTableController_Example.framework */,
+				EC369539404BFDEEDAB6B568 /* Pods_NAExpandableTableController_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "NAExpandableTableController_Example" */;
 			buildPhases = (
+				EA3C2869183D09E37E218682 /* 📦 Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
+				90D9DF5249CF22A4499C526C /* 📦 Embed Pods Frameworks */,
+				A2F3E5CCACB4CE889A64AA47 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -151,9 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "NAExpandableTableController_Tests" */;
 			buildPhases = (
+				96D121F064C4AA2DD66A9D86 /* 📦 Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
+				A21F0FD02640AA446D0F2385 /* 📦 Embed Pods Frameworks */,
+				E9BA80BFCA32B4BF46E260A7 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,6 +260,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		90D9DF5249CF22A4499C526C /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NAExpandableTableController_Example/Pods-NAExpandableTableController_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96D121F064C4AA2DD66A9D86 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A21F0FD02640AA446D0F2385 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NAExpandableTableController_Tests/Pods-NAExpandableTableController_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2F3E5CCACB4CE889A64AA47 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NAExpandableTableController_Example/Pods-NAExpandableTableController_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9BA80BFCA32B4BF46E260A7 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NAExpandableTableController_Tests/Pods-NAExpandableTableController_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA3C2869183D09E37E218682 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		607FACCC1AFB9204008FA782 /* Sources */ = {
@@ -355,10 +486,10 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC5ADCBAA620C14AE68BF840 /* Pods-NAExpandableTableController_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NAExpandableTableController/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -368,10 +499,10 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 256C57FCD379C710429C6F0F /* Pods-NAExpandableTableController_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NAExpandableTableController/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -381,6 +512,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21CB462EEFFD1DEB6C63FDC2 /* Pods-NAExpandableTableController_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -401,6 +533,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9C460DEF90A48230CA2B9A1 /* Pods-NAExpandableTableController_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
