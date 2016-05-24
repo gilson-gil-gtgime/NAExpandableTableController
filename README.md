@@ -4,6 +4,8 @@
 [![License](https://img.shields.io/cocoapods/l/NAExpandableTableController.svg?style=flat)](http://cocoapods.org/pods/NAExpandableTableController)
 [![Platform](https://img.shields.io/cocoapods/p/NAExpandableTableController.svg?style=flat)](http://cocoapods.org/pods/NAExpandableTableController)
 
+![Demo](http://g.recordit.co/d3rx7fhaqV.gif)
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
