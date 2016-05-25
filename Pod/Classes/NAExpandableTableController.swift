@@ -14,7 +14,7 @@ import UIKit
     func expandableTableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     
     /// Equivalent to UITableView's cellForRowAtIndexPath - called for all cells except the section title cell (the one that toggles expansion)
-    func expandableTableView(tableView: UITableView, section: Int, cellForRow row: Int) -> UITableViewCell
+    func expandableTableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     
     /// Equivalent to UITableView's cellForRowAtIndexPath - called only for section title cell (the one that toggles expansion)
     func expandableTableView(tableView: UITableView, titleCellForSection section: Int, expanded: Bool) -> UITableViewCell
@@ -102,7 +102,8 @@ public class NAExpandableTableController: NSObject, UITableViewDataSource, UITab
             return dataSource.expandableTableView(tableView, titleCellForSection: indexPath.section, expanded: expandDict[indexPath.section] ?? false)
         }
         
-        return dataSource.expandableTableView(tableView, section: indexPath.section, cellForRow: indexPath.row)
+        let rowIndexPath = NSIndexPath(forRow: indexPath.row - 1, inSection: indexPath.section)
+        return dataSource.expandableTableView(tableView, cellForRowAtIndexPath: rowIndexPath)
     }
     
     public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
