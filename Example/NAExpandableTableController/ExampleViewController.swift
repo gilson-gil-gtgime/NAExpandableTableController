@@ -17,13 +17,14 @@ class ExampleViewController: UITableViewController, NAExpandableTableViewDataSou
     let expandableSectionIndices = [0, 2, 3]
 
     /// Need to hold strong reference to our expandable table controller
-    var expandableTableController: NAExpandableTableController!
+    private var expandableTableController: NAExpandableTableController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // First create our NAExpandableTableController instance
         self.expandableTableController = NAExpandableTableController(dataSource: self, delegate: self)
+        self.expandableTableController.exclusiveExpand = false
         
         // Now assign it to our tableView's dataSource & delegate, that's it!
         tableView.dataSource = self.expandableTableController
@@ -43,10 +44,10 @@ class ExampleViewController: UITableViewController, NAExpandableTableViewDataSou
         return numberOfRowsInEachSection
     }
     
-    func expandableTableView(tableView: UITableView, section: Int, cellForRow row: Int) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: NSIndexPath(forRow: row, inSection: section))
+    func expandableTableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         // Configure cell here...
-        cell.textLabel?.text = "Cell - section \(section), row \(row)"
+        cell.textLabel?.text = "Cell - section \(indexPath.section), row \(indexPath.row)"
         return cell
     }
     

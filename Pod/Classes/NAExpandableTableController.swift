@@ -50,9 +50,13 @@ public class NAExpandableTableController: NSObject, UITableViewDataSource, UITab
     /// Default height to use for all cells (44)
     public var defaultRowHeight: CGFloat = 44
     
+    /// Determines if multiple sections can be expanded at the same time. If set to `true`, then only one section can be expanded at a time. If a section is expanded and you try to expand another section, the first one will be collapsed.
+    public var exclusiveExpand: Bool = false
+    
     public weak var dataSource: NAExpandableTableViewDataSource?
     public weak var delegate: NAExpandableTableViewDelegate?
     
+    /// Keeps track of which section indices are expanded
     private var expandDict = [Int: Bool]()
     
     public init(dataSource: NAExpandableTableViewDataSource? = nil, delegate: NAExpandableTableViewDelegate? = nil) {
@@ -102,7 +106,7 @@ public class NAExpandableTableController: NSObject, UITableViewDataSource, UITab
             return dataSource.expandableTableView(tableView, titleCellForSection: indexPath.section, expanded: expandDict[indexPath.section] ?? false)
         }
         
-        let rowIndexPath = NSIndexPath(forRow: indexPath.row - 1, inSection: indexPath.section)
+        let rowIndexPath = expandable ? NSIndexPath(forRow: indexPath.row - 1, inSection: indexPath.section) : indexPath
         return dataSource.expandableTableView(tableView, cellForRowAtIndexPath: rowIndexPath)
     }
     
@@ -110,9 +114,16 @@ public class NAExpandableTableController: NSObject, UITableViewDataSource, UITab
         // Check if the first cell in the section
         let expandable = dataSource?.expandableTableView?(tableView, isExpandableSection: indexPath.section) ?? true
         if indexPath.row == 0 && expandable {
+            // Check if this section is already expanded, if so then collapse it
             if expandDict[indexPath.section] ?? false {
                 collapseSection(tableView, section: indexPath.section)
             } else {
+                // If exclusiveExpand is true, then collapse any expanded sections
+                if exclusiveExpand {
+                    for (section, expanded) in expandDict where expanded {
+                        collapseSection(tableView, section: section)
+                    }
+                }
                 expandSection(tableView, section: indexPath.section)
             }
             
