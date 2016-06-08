@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/cocoapods/l/NAExpandableTableController.svg?style=flat)](http://cocoapods.org/pods/NAExpandableTableController)
 [![Platform](https://img.shields.io/cocoapods/p/NAExpandableTableController.svg?style=flat)](http://cocoapods.org/pods/NAExpandableTableController)
 
-![Demo](http://g.recordit.co/UsDQ3oI0wg.gif)
+![Demo](http://g.recordit.co/A9Zc4HgQnp.gif)
 
 ## Usage
 
