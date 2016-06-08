@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   DESC
 
   s.homepage         = "https://github.com/narciero/NAExpandableTableController"
-  s.screenshots      = "http://g.recordit.co/UsDQ3oI0wg.gif"
+  s.screenshots      = "http://g.recordit.co/A9Zc4HgQnp.gif"
   s.license          = 'MIT'
   s.author           = { "Nick A" => "narciero" }
   s.source           = { :git => "https://github.com/narciero/NAExpandableTableController.git", :tag => s.version.to_s }
