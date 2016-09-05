@@ -133,8 +133,6 @@ public class NAExpandableTableController: NSObject, UITableViewDataSource, UITab
             let rowIndexPath = NSIndexPath(forRow: indexPath.row - 1, inSection: indexPath.section)
             delegate?.expandableTableView?(tableView, didSelectRowAtIndexPath: rowIndexPath)
         }
-        
-        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)
     }
     
     internal func expandSection(tableView: UITableView, section: Int) {
