@@ -45,6 +45,10 @@ import UIKit
     optional func expandableTableView(tableView: UITableView, didExpandSection section: Int, expanded: Bool)
 }
 
+@objc public protocol NAExpandableScrollViewDelegate {
+    optional func expandableScrollViewDidScroll(scrollView: UIScrollView)
+}
+
 public class NAExpandableTableController: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     /// Default height to use for all cells (44)
@@ -55,7 +59,9 @@ public class NAExpandableTableController: NSObject, UITableViewDataSource, UITab
     
     public weak var dataSource: NAExpandableTableViewDataSource?
     public weak var delegate: NAExpandableTableViewDelegate?
-    
+    public weak var scrollViewDelegate: NAExpandableScrollViewDelegate?
+  
+
     /// Keeps track of which section indices are expanded
     private var expandDict = [Int: Bool]()
     
@@ -168,4 +174,11 @@ public class NAExpandableTableController: NSObject, UITableViewDataSource, UITab
         
         delegate?.expandableTableView?(tableView, didExpandSection: section, expanded: false)
     }
+}
+
+// MARK: UIScrollView Delegate methods
+extension NAExpandableTableController: UIScrollViewDelegate {
+  public func scrollViewDidScroll(scrollView: UIScrollView) {
+    scrollViewDelegate?.expandableScrollViewDidScroll?(scrollView)
+  }
 }
