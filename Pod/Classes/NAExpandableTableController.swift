@@ -115,7 +115,32 @@ public class NAExpandableTableController: NSObject, UITableViewDataSource, UITab
         let rowIndexPath = expandable ? NSIndexPath(forRow: indexPath.row - 1, inSection: indexPath.section) : indexPath
         return dataSource.expandableTableView(tableView, cellForRowAtIndexPath: rowIndexPath)
     }
-    
+  
+  public func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    // Check if the first cell in the section
+    let expandable = dataSource?.expandableTableView?(tableView, isExpandableSection: indexPath.section) ?? true
+    if indexPath.row == 0 && expandable {
+      // Check if this section is already expanded, if so then collapse it
+      if expandDict[indexPath.section] ?? false {
+        collapseSection(tableView, section: indexPath.section)
+      } else {
+        // If exclusiveExpand is true, then collapse any expanded sections
+        if exclusiveExpand {
+          for (section, expanded) in expandDict where expanded {
+            collapseSection(tableView, section: section)
+          }
+        }
+        expandSection(tableView, section: indexPath.section)
+      }
+      
+      delegate?.expandableTableView?(tableView, didSelectTitleCellInSection: indexPath.section)
+    } else {
+      // Need to decrement indexPath.row by 1 because the first row is the title cell
+      let rowIndexPath = NSIndexPath(forRow: indexPath.row - 1, inSection: indexPath.section)
+      delegate?.expandableTableView?(tableView, didSelectRowAtIndexPath: rowIndexPath)
+    }
+  }
+  
     public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // Check if the first cell in the section
         let expandable = dataSource?.expandableTableView?(tableView, isExpandableSection: indexPath.section) ?? true
