@@ -10,7 +10,7 @@ import UIKit
 import NAExpandableTableController
 
 class ExampleViewController: UITableViewController, NAExpandableTableViewDataSource, NAExpandableTableViewDelegate {
-    
+
     /// Basic seed data for our example tableView
     let numberOfSections = 5
     let numberOfRowsInEachSection = 3
@@ -30,49 +30,49 @@ class ExampleViewController: UITableViewController, NAExpandableTableViewDataSou
         tableView.dataSource = self.expandableTableController
         tableView.delegate = self.expandableTableController
         
-        tableView.tableFooterView = UIView(frame: CGRectZero)
+        tableView.tableFooterView = UIView(frame: .zero)
         tableView.reloadData()
     }
 
     // MARK: - NAExpandableTableViewDataSource
     
-    func numberOfSectionsInExpandableTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInExpandableTableView(_ tableView: UITableView) -> Int {
         return numberOfSections
     }
     
-    func expandableTableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func expandableTableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return numberOfRowsInEachSection
     }
     
-    func expandableTableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+    func expandableTableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath)
         // Configure cell here...
         cell.textLabel?.text = "Cell - section \(indexPath.section), row \(indexPath.row)"
         return cell
     }
     
-    func expandableTableView(tableView: UITableView, titleCellForSection section: Int, expanded: Bool) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SectionTitleCell")!
+    func expandableTableView(_ tableView: UITableView, titleCellForSection section: Int, expanded: Bool) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SectionTitleCell")!
         // Configure cell here...
         cell.textLabel?.text = "SECTION \(section)"
         return cell
     }
     
-    func expandableTableView(tableView: UITableView, isExpandableSection section: Int) -> Bool {
+    func expandableTableView(_ tableView: UITableView, isExpandableSection section: Int) -> Bool {
         return expandableSectionIndices.contains(section)
     }
     
     // MARK: - NAExpandableTableViewDelegate
     
-    func expandableTableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func expandableTableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
         print("Cell selected - section \(indexPath.section), row \(indexPath.row)")
     }
     
-    func expandableTableView(tableView: UITableView, didSelectTitleCellInSection section: Int) {
+    func expandableTableView(_ tableView: UITableView, didSelectTitleCellInSection section: Int) {
         print("Title cell selected - section \(section)")
     }
-    
-    func expandableTableView(tableView: UITableView, didExpandSection section: Int, expanded: Bool) {
+  
+    func expandableTableView(_ tableView: UITableView, didExpandSection section: Int, expanded: Bool) {
         print("Section \(section) " + (expanded ? "expanded" : "collapsed"))
     }
 }
